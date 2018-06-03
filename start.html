@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-holder clearfix">
+                <a class="header-logo" href="start.html" title="Template">
+                    <h1>Template</h1>
+                </a>
+                <a class="header-logo-mobile" href="start.html" title="Template">
+                    <h1>TL</h1>
+                </a>
+                <ul class="login-bag">
+                    <li><a href="#" class="email-signup">E-mail sign up</a></li>
+                    <li><a href="shopping-bag.html" class="bag">Bag <span id="total-price"></span> <span id="bag-count">(0)</span> </a></li>
+                </ul>
+                <button id="hamburger" class="hamburger-stripes"></button>
+            </div>
+            <div class="header-bottom clearfix">
+                <nav class="header-nav">
+                    <ul class="nav-list">
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">HandBags</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Clearance</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </nav>
+                <div class="style-search">
+                    <input type="search" placeholder="Style Name" class="style-search-input">
+                    <button type="button" class="style-search-button"></button>
+                </div>
+            </div>
+        </header>
+        <main class="page-content">
+            <section class="slider-container">
+                <!-- Slider-->
+                <div class="slider-wrapper">
+                    <div id="slider">
+                        <div class="slide slide1 fade">
+                            <div class="slide-content">
+                                <a href="catalog.html">
+                                    <picture>
+                                        <source srcset="img/1-mobile.jpg" media="(max-width: 767px)">
+                                        <source srcset="img/1-tablet.jpg" media="(max-width: 1023px)">
+                                        <img src="img/1.jpg" alt="black & white">
+                                    </picture>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide slide2 fade">
+                            <div class="slide-content">
+                                <a href="catalog.html">
+                                    <picture>
+                                        <source srcset="img/2-mobile.jpg" media="(max-width: 767px)">
+                                        <source srcset="img/2-tablet.jpg" media="(max-width: 1023px)">
+                                        <img src="img/2.jpg" alt="black & white">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide slide3 fade">
+                            <div class="slide-content">
+                                <a href="catalog.html">
+                                    <picture>
+                                        <source srcset="img/3-mobile.jpg" media="(max-width: 767px)">
+                                        <source srcset="img/3-tablet.jpg" media="(max-width: 1023px)">
+                                        <img src="img/3.jpg" alt="black & white">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="arrow-left" class="arrow" onclick="plusSlides(-1)">
+                        <div class="arrow-to-left"></div>
+                    </div>
+                    <div id="arrow-right" class="arrow" onclick="plusSlides(1)">
+                        <div class="arrow-to-right"></div>
+                    </div>
+                </div>
+
+            </section>
+            <div class="dots">
+                <div class="dots-container">
+                    <span class="dot active" onclick="dotSlides(1)"></span>
+                    <span class="dot" onclick="dotSlides(2)"></span>
+                    <span class="dot" onclick="dotSlides(3)"></span>
+                </div>
+            </div>
+            <section class="banner">
+                <div class="banner-container clearfix">
+                    <div class="banner-left">
+                        <a href="item.html">
+                            <picture>
+                                <source srcset="img/banners/nike-mobile.jpg"  media="(max-width: 767px)">
+                                <source srcset="img/banners/nike-tablet.jpg" media="(max-width: 1023px)">
+                                <img src="img/banners/nike.jpg" alt="nike-red">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="banner-right">
+                        <a href="catalog.html">
+                            <picture>
+                                <source srcset="img/banners/hats-tablet.jpg" media="(max-width: 1023px)">
+                                <img src="img/banners/hats.jpg" alt="hats">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="arrivals">
+                <h2 class="section-header">New Arrivals</h2>
+                <div class="arrivals-container">
+                    <div class="new-arrival">
+                        <div class="arrival-img-holder">
+                            <div class="new-label"><p>NEW</p></div>
+                            <img src="img/thumbnail/skinny-jeans.jpg" alt="skinny jeans" width="240" height="341">
+                            <a class="view-item" href="item.html#id=8c061815-6a7d-4465-bb78-1bdc6c5adebf">View item</a>
+                        </div>
+                        <h3 class="new-arrival-title"><a href="item.html#id=8c061815-6a7d-4465-bb78-1bdc6c5adebf">Only Skinny Jeans</a></h3>
+                        <p class="item-price">&pound;65.50</p>
+                    </div>
+                    <div class="new-arrival">
+                        <div class="arrival-img-holder">
+                            <div class="new-label"><p>NEW</p></div>
+                            <img src="img/thumbnail/neck-knitted-jumper.jpg" alt="jumper" width="240" height="340">
+                            <a class="view-item" href="item.html#id=8b300772-eee3-4ff1-b091-e89f17e0e469">View item</a>
+                        </div>
+                        <h3 class="new-arrival-title"><a href="item.html#id=8b300772-eee3-4ff1-b091-e89f17e0e469">Neck Knitted Jumper</a></h3>
+                        <p class="item-price">&pound;76.25</p>
+                    </div>
+                    <div class="new-arrival">
+                        <div class="arrival-img-holder">
+                            <img src="img/thumbnail/Turtle-neck.jpg" alt="turtle-neck" width="240" height="340">
+                            <a class="view-item" href="item.html#id=9ded7821-e510-4a16-ba9f-57c1e3442ad8">View item</a>
+                        </div>
+                        <h3 class="new-arrival-title"><a href="item.html#id=9ded7821-e510-4a16-ba9f-57c1e3442ad8">Turtle Neck Jumper in Rib</a></h3>
+                        <p class="item-price">&pound;130.25</p>
+                    </div>
+                    <div class="new-arrival">
+                        <div class="arrival-img-holder">
+                            <img src="img/thumbnail/crocket.jpg" alt="crocket" width="240" height="340">
+                            <a class="view-item" href="#">View item</a>
+                        </div>
+                        <h3 class="new-arrival-title"><a href="#">With Patchwork Crochet</a></h3>
+                        <p class="item-price">&pound;80.60</p>
+                    </div>
+                </div>
+                <div class="arrivals-all-btn"><a href="#" class="arrivals-all">All arrivals</a></div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer clearfix">
+        <div class="footer-container clearfix">
+            <nav class="footer-nav">
+                <h3 class="footer-nav-name">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#">Store locator</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Size guide</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav last-one">
+                <h3 class="footer-nav-name">Customer Care</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#">Customer service</a></li>
+                    <li><a href="#">Take my order</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Shopping &amp; delivery</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </nav>
+            <div class="contact">
+                <h3 class="contact-name">Question</h3>
+                <a href="#" class="tweet-us" title="tweet-us"><span class="tweet"><i>Tweet us</i>&nbsp;<b class="bolder">&#64;template</b></span></a>
+            </div>
+            <div class="contact last">
+                <h3 class="contact-name">Order by phone</h3>
+                <div class="phone"><p>8-800-409-47-12</p></div>
+            </div>
+            <div class="delivery-slogan">
+                <p>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+            </div>
+            <div class="social">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="facebook"></i></a></li>
+                    <li><a href="#"><i class="tweeter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-mobile-layout clearfix">
+            <div class="contact-mobile">
+                <h3 class="contact-name">Question</h3>
+                <a href="#" class="tweet-us" title="tweet-us"><span class="tweet"><i>Tweet us</i>&nbsp;<b class="bolder">&#64;template</b></span></a>
+            </div>
+            <div class="contact-mobile">
+                <h3 class="contact-name">Order by phone</h3>
+                <div class="phone"><p>8-800-409-47-12</p></div>
+            </div>
+        </div>
+        <div class="extra-links-mobile clearfix">
+            <div class="social">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="facebook"></i></a></li>
+                    <li><a href="#"><i class="tweeter"></i></a></li>
+                </ul>
+            </div>
+            <div class="external-links">
+                <ul class="external-links-list">
+                    <li><a href="#">Legal notice</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Site map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-sharing clearfix">
+            <div class="footer-sharing-container clearfix">
+                <div class="copyright">
+                    <h4>&copy;&nbsp;2010-2015, The Template Group inc.</h4>
+                </div>
+                <div class="share"><a href="#" title="share">Share</a><span class="share-counter">1&nbsp;437</span></div>
+                <div class="external-links">
+                    <ul class="external-links-list">
+                        <li><a href="#">Legal notice</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Site map</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+<script src="data/catalog.js"></script>
+<script src="js/start.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/hamburger-menu.js"></script>
+</body>
+</html>
+
