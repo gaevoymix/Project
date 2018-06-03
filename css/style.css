@@ -323,7 +323,7 @@ SLIDER STYLE
 	background-color: #fff;
 	padding: 10px 20px 10px 22px;
 	width: calc((100%/6) - 0.1px); /*fix calc for IE11*/
-	cursor: url(../img/pointer.gif) 9 5, pointer;
+	cursor: url(../img/cursor.cur) 9 5, pointer;
 }
 
 .select:hover {
@@ -354,7 +354,7 @@ SLIDER STYLE
 
 .select-block p {
 	margin: 0;
-	cursor: url(../img/pointer.gif) 9 5, pointer;
+	cursor: url(../img/cursor.cur) 9 5, pointer;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	font-size: 12px;
@@ -494,7 +494,7 @@ SLIDER STYLE
 	margin-right: 30px;
 	background: transparent;
 	font-size: 14px;
-	cursor: url(../img/pointer.gif) 9 5, pointer;
+	cursor: url(../img/cursor.cur) 9 5, pointer;
 	outline: none;
 	border: none;
 }
