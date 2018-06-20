@@ -1,6 +1,3 @@
-var thumbs = document.querySelectorAll('.thumbnail');
-var fullItem = document.querySelectorAll('.full-picture');
-
 setItemView(getItem());
 getPrice(getItem());
 
@@ -19,6 +16,8 @@ function getItem() {
 
 //Setting content
 function setItemView(item) {
+    var thumbs = document.querySelectorAll('.thumbnail');
+    var fullItem = document.querySelectorAll('.full-picture');
     if (item !== undefined) {
         for(var i = 0; i < thumbs.length; i += 1) {
             if (item.preview.length > i) {
@@ -57,7 +56,9 @@ function thumbSlide(n) {
 }
 
 function showSlides(n) {
-    if (n == undefined) {
+    var fullItem = document.querySelectorAll('.full-picture');
+    var thumbs = document.querySelectorAll('.thumbnail');
+    if (n === undefined) {
         n = ++imageIndex;
     }
 
@@ -80,30 +81,17 @@ function showSlides(n) {
     thumbs[imageIndex - 1].classList.add('active-thumbnail');
 }
 
+//color and size buttons
+document.querySelector('.item-description-container').addEventListener('click', function(e) {
+    if(e.target.classList.contains('btn-prop')) {
+        changeActiveBtn(e.target);
+    }
+});
 
-//selecting sizes
-var sizeButtons = document.querySelectorAll('#size .btn-prop');
-
-for (var i = 0; i < sizeButtons.length; i++) {
-    sizeButtons[i].onclick = function () {
-        var activeBtn = document.querySelector('#size .btn-prop.active-property');
-        if(activeBtn) {
-            activeBtn.classList.remove('active-property');
-        }
-        this.classList.add('active-property');
-    };
+function changeActiveBtn(target) {
+    var btns = target.parentNode.querySelectorAll('.btn-prop');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove('active-property');
+    }
+    target.classList.add('active-property');
 }
-
-//selecting colors
-var colorButtons = document.querySelectorAll('#color .btn-prop')
-
-for (var i = 0; i < colorButtons.length; i++) {
-    colorButtons[i].onclick = function () {
-        var activeBtn = document.querySelector('#color .btn-prop.active-property');
-        if(activeBtn) {
-            activeBtn.classList.remove('active-property');
-        }
-        this.classList.add('active-property');
-    };
-}
-

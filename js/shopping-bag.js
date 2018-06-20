@@ -1,13 +1,11 @@
-var addedItemPrice = document.querySelectorAll('.added-item-price');
-var quantity = document.querySelectorAll('.quantity-number');
-var bagTotals = document.getElementById('total-price');
-var bagCount = document.getElementById('bag-count');
-var totalPrice = document.querySelector('.total-price');
-
 totalCost();
-
 //calculation total cost
 function totalCost() {
+    var quantity = document.querySelectorAll('.quantity-number');
+    var addedItemPrice = document.querySelectorAll('.added-item-price');
+    var bagTotals = document.getElementById('total-price');
+    var bagCount = document.getElementById('bag-count');
+    var totalPrice = document.querySelector('.total-price');
     var sum = 0;
     var totalQuantity = 0;
     var itemPrice = [];
@@ -22,31 +20,22 @@ function totalCost() {
     return sum
 }
 
-//deleting item
-document.querySelector('.bag-items').addEventListener('click', deleteItem);
-function deleteItem(e) {
+//item managing
+document.querySelector('.bag-items').addEventListener('click', bagItemManaging);
+function bagItemManaging(e) {
+    //delete item
     if(e.target.className === 'remove-item') {
         console.log('delete');
         e.target.previousSibling.previousSibling.childNodes[2].innerText = 0;
         totalCost();
         e.target.parentElement.parentElement.remove();
-
     }
-}
-
-//changing quantity
-document.querySelector('.bag-items').addEventListener('click', increaseQuantity);
-function increaseQuantity(e) {
-
+    //change quantity increase
     if(e.target.parentElement.className === 'plus-btn') {
         e.target.parentElement.previousSibling.innerText++;
         totalCost();
-
     }
-}
-
-document.querySelector('.bag-items').addEventListener('click', decreaseQuantity);
-function decreaseQuantity(e) {
+    // decrease
     if(e.target.parentElement.className === 'minus-btn') {
         if ( e.target.parentElement.nextSibling.innerText > 1) {
             e.target.parentElement.nextSibling.innerText--;
@@ -56,6 +45,9 @@ function decreaseQuantity(e) {
 }
 
 function resetNumbers() {
+    var bagTotals = document.getElementById('total-price');
+    var bagCount = document.getElementById('bag-count');
+    var totalPrice = document.querySelector('.total-price');
     totalPrice.innerText = String.fromCharCode(163) + 0;
     bagTotals.innerText = String.fromCharCode(163) + 0;
     bagCount.innerText = '(' + 0 + ')';

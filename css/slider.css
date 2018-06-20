@@ -1,0 +1,121 @@
+/*
+SLIDER STYLE
+ */
+.slider-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.slider-wrapper {position: relative;}
+
+.slide {
+    background-size: cover;
+    background: no-repeat center;
+    height: 769px;
+}
+
+.slide-content a img {
+    width: 100%;
+    height: 769px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: 35px;
+    height: 110px;
+    background: #f14a58;
+}
+
+#arrow-left {left: 0;}
+
+.arrow-to-left,
+.arrow-to-right {position: relative;}
+
+.arrow-to-left:before {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-right: 14px solid #fff;
+    top: 43px;
+    left: -4px;
+
+}
+
+.arrow-to-left:after {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-right: 14px solid #f14a58;
+    top: 43px;
+    left: 0;
+
+}
+
+#arrow-right {right: 0;}
+
+.arrow-to-right:before {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-left: 14px solid #fff;
+    top: 43px;
+    right: -4px;
+
+}
+
+.arrow-to-right:after {
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-left: 14px solid #f14a58;
+    top: 43px;
+    right: 0;
+
+}
+
+.dots {border-top: 1px solid #e5e5e5;}
+
+.dots-container {
+    text-align: center;
+    background-color: #f7f7f7;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.dot {
+    margin-top: 37px;
+    margin-bottom: 37px;
+    height: 6px;
+    width: 6px;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 22px;
+}
+
+.dot:first-child {margin-left: 0;}
+
+.dots span.active,
+.dot:hover{background-color: #f14a58;}
+/*-------------------------------------*/
+
+/*SLIDER FADE EFFECT*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/*----------------------------------------*/
